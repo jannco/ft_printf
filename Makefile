@@ -6,7 +6,7 @@
 #    By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 20:41:02 by yadereve          #+#    #+#              #
-#    Updated: 2023/10/24 20:45:38 by yadereve         ###   ########.fr        #
+#    Updated: 2023/10/26 12:02:24 by yadereve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,20 +18,28 @@ RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_printf.c \
+MAKE = make
+
+SRCS = ft_printf.c ft_putchar.c ft_putstr.c ft_putdec.c \
 
 OBJS = ${SRCS:.c=.o}
 
-all: ${NAME} ${OBJS}
+all: ${NAME}
 
 $(NAME): ${OBJS}
-		ar rcs ${NAME} ${OBJS}
+		@${MAKE} -C ./libft
+		@cp libft/libft.a ${NAME}
+		@ar -rcs ${NAME} ${OBJS}
 
 clean:
-		${RM} ${OBJS}
+		@${RM} ${OBJS}
+		@${MAKE} clean -C ./libft
+
 
 fclean:	clean
-		${RM} ${NAME}
+		@${RM} ${NAME}
+		@${RM} libft.a
+		@${MAKE} fclean -C ./libft
 
 re:		fclean all
 
