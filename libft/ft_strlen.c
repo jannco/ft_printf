@@ -6,11 +6,11 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:01:13 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/25 10:43:34 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:34:00 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 size_t	ft_strlen(const char *s)
 {

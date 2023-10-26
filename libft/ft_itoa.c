@@ -6,11 +6,11 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 15:38:43 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/17 16:07:49 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:37:52 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 static int	ft_countnum(int n)
 {
