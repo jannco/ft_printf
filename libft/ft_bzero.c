@@ -6,11 +6,11 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:34:58 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/26 12:32:12 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:31:17 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 void	ft_bzero(void *s, size_t n)
 {

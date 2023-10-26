@@ -6,11 +6,11 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 20:22:51 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/26 12:41:45 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:31:51 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_putstr(char *s)
 {

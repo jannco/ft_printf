@@ -6,11 +6,11 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:17:17 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/26 12:32:43 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:31:43 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 void	*ft_calloc(size_t n, size_t size)
 {

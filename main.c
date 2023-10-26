@@ -6,7 +6,7 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 11:13:27 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/26 11:20:46 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:41:34 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main()
 {
 	int	d;
 
-	d = 3;
-	ft_printf("asdo%d", d);
+	d = 12;
+	ft_printf("asdo%d");
 	return (0);
 }
