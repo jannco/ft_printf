@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 14:34:58 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/26 13:31:17 by yadereve         ###   ########.fr       */
+/*   Created: 2023/10/25 20:34:15 by yadereve          #+#    #+#             */
+/*   Updated: 2023/10/26 15:45:44 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_putnbr(long n)
 {
-	char	*str;
-	size_t	i;
+	int	i;
 
 	i = 0;
-	str = s;
-	while (i < n)
+	if (n < 0)
 	{
-		str[i] = 0;
-		i++;
+		n *= -1;
+		i += ft_putchar('-');
 	}
+	if (n < 10)
+	{
+		i += ft_putchar(n + '0');
+	}
+	else
+	{
+		i += ft_putnbr(n / 10) + ft_putnbr(n % 10);
+	}
+	return (i);
 }
-/*
-int main()
-{
-	char buffer[10];
-
-	bzero(buffer, sizeof(buffer));
-	return 0;
-} */

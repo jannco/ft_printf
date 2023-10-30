@@ -6,7 +6,7 @@
 #    By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 20:41:02 by yadereve          #+#    #+#              #
-#    Updated: 2023/10/26 12:46:58 by yadereve         ###   ########.fr        #
+#    Updated: 2023/10/26 18:00:57 by yadereve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,12 +22,10 @@ MAKE = make
 
 SRCS = ft_printf.c \
 		libft/ft_putchar.c \
-		libft/ft_bzero.c \
-		libft/ft_calloc.c \
-		libft/ft_strlen.c \
-		libft/ft_itoa.c \
+		libft/ft_putuncig.c \
 		libft/ft_putstr.c \
-		libft/ft_putdec.c \
+		libft/ft_putnbr.c \
+		libft/ft_strlen.c \
 
 OBJS = ${SRCS:.c=.o}
 
