@@ -6,7 +6,7 @@
 #    By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 20:41:02 by yadereve          #+#    #+#              #
-#    Updated: 2023/10/26 18:00:57 by yadereve         ###   ########.fr        #
+#    Updated: 2023/10/30 17:57:56 by yadereve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ SRCS = ft_printf.c \
 		libft/ft_putstr.c \
 		libft/ft_putnbr.c \
 		libft/ft_strlen.c \
+		libft/ft_puthex.c \
+		libft/ft_putpoint.c \
 
 OBJS = ${SRCS:.c=.o}
 

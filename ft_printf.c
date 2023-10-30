@@ -6,7 +6,7 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:09:26 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/26 17:29:45 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/30 18:13:48 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,10 @@ static int	ft_checkformat(char c, va_list ap)
 		return (ft_putchar('%'));
 	else if (c == 'u')
 		return (ft_putuncig(va_arg(ap, unsigned int)));
-	// else if (c == 'p')
-	// 	return (ft_putpoint();
-	// else if (c == 'x')
-	// 	return (ft_puthex_low();
-	// else if (c == 'X')
-	// 	return (ft_puthex_up();
+	else if (c == 'p')
+		return (ft_putpoint(va_arg(ap, unsigned long int), 1));
+	else if (c == 'x' || c == 'X')
+		return (ft_puthex(va_arg(ap, unsigned int), c));
 	return (0);
 }
 
