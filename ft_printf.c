@@ -6,7 +6,7 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 18:09:26 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/30 18:13:48 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/30 21:12:35 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ static int	ft_checkformat(char c, va_list ap)
 	else if (c == 'u')
 		return (ft_putuncig(va_arg(ap, unsigned int)));
 	else if (c == 'p')
-		return (ft_putpoint(va_arg(ap, unsigned long int), 1));
+		return (ft_putpoint(va_arg(ap, void*)));
 	else if (c == 'x' || c == 'X')
-		return (ft_puthex(va_arg(ap, unsigned int), c));
+		return (ft_puthex(va_arg(ap, int), c));
 	return (0);
 }
 
@@ -44,8 +44,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			n += ft_checkformat(format[i + 1], ap);
-			i++;
+			n += ft_checkformat(format[++i], ap);
 		}
 		else
 		{

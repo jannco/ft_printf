@@ -6,25 +6,30 @@
 /*   By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:48:41 by yadereve          #+#    #+#             */
-/*   Updated: 2023/10/30 18:09:56 by yadereve         ###   ########.fr       */
+/*   Updated: 2023/10/30 20:56:40 by yadereve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_puthex(unsigned int nb, char c)
+int	ft_puthex(int nb, char c)
 {
-	int	i;
+	int				i;
+	unsigned int	x;
 
+	x = nb;
 	i = 0;
-	if (nb <= 16)
+	if (x >= 16)
 	{
-		if (c == 'x')
-			i += putchar("0123456789absdef"[nb]);
-		if (c == 'X')
-			i += putchar("0123456789ABCDEF"[nb]);
+		i += ft_puthex(x / 16, c);
+		i += ft_puthex(x % 16, c);
 	}
 	else
-		i += ft_puthex(nb / 16, c) + ft_puthex(nb % 16, c);
+	{
+		if (c == 'x')
+			i += ft_putchar("0123456789abcdef"[x]);
+		else if (c == 'X')
+			i += ft_putchar("0123456789ABCDEF"[x]);
+	}
 	return (i);
 }
