@@ -6,7 +6,7 @@
 #    By: yadereve <yadereve@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/24 20:41:02 by yadereve          #+#    #+#              #
-#    Updated: 2023/10/30 17:57:56 by yadereve         ###   ########.fr        #
+#    Updated: 2023/11/23 10:59:08 by yadereve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,6 @@ CC = cc
 RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
-
-MAKE = make
 
 SRCS = ft_printf.c \
 		libft/ft_putchar.c \
@@ -38,7 +36,6 @@ $(NAME): ${OBJS}
 
 clean:
 		@${RM} ${OBJS}
-
 
 fclean:	clean
 		@${RM} ${NAME}
